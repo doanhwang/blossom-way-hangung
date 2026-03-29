@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLOSSOM W.A.Y. Radio — 당신의 이야기가 뇌를 깨웁니다</title>
+<meta name="description" content="시니어를 위한 최초의 임상 검증 기반 치매 예방 특화 AI 개인화 라디오 케어 프로그램">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BLOSSOM W.A.Y. Radio — 당신의 이야기가 뇌를 깨웁니다">
+<meta property="og:description" content="나만을 위한 1:1 맞춤형 AI 치매 예방 라디오. 200편 이상의 임상 논문 기반 케어 프로그램.">
+<meta property="og:image" content="https://doanhwang.github.io/blossom-way-hangung/og-thumb.jpg">
+<meta property="og:url" content="https://doanhwang.github.io/blossom-way-hangung/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://doanhwang.github.io/blossom-way-hangung/og-thumb.jpg">
+<meta name="theme-color" content="#c9a96e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#faf6f0;--gold:#c9a96e;--gold-light:#e8d5b0;--dark:#1a1410;--rose:#d4857a;--ink:#2d1f1a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Noto Sans KR',sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 48px;background:rgba(250,246,240,0.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,169,110,0.22)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:.04em}
+.nav-logo span{font-family:'Noto Serif KR',serif;font-size:.68rem;font-weight:300;color:var(--ink);display:block;letter-spacing:.14em}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-size:.76rem;letter-spacing:.1em;color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s,color .2s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.nav-cta{font-size:.73rem;font-weight:500;letter-spacing:.1em;color:var(--cream);background:var(--gold);padding:9px 22px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--dark)}
+.hero{padding-top:72px;width:100%;position:relative}
+.hero img,.slide-section img{width:100%;display:block}
+.slide-section{width:100%}
+.two-col{display:grid;grid-template-columns:1fr 1fr}
+.two-col img{width:100%;display:block}
+.gold-band{background:var(--gold);color:#fff;text-align:center;padding:18px 48px;font-family:'Noto Serif KR',serif;font-size:.82rem;letter-spacing:.18em}
+.reveal{opacity:0;transform:translateY(44px);transition:opacity .85s ease,transform .85s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-l{opacity:0;transform:translateX(-44px);transition:opacity .85s ease,transform .85s ease}
+.reveal-l.visible{opacity:1;transform:translateX(0)}
+.reveal-r{opacity:0;transform:translateX(44px);transition:opacity .85s ease,transform .85s ease}
+.reveal-r.visible{opacity:1;transform:translateX(0)}
+@keyframes drift{0%{transform:translateY(-60px) rotate(0deg);opacity:0}10%{opacity:.6}90%{opacity:.3}100%{transform:translateY(110vh) rotate(360deg);opacity:0}}
+.petal{position:fixed;pointer-events:none;z-index:200;animation:drift linear infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.7);font-size:.62rem;letter-spacing:.22em;animation:bounce 2s ease-in-out infinite}
+.scroll-hint::after{content:'';width:1px;height:28px;background:linear-gradient(to bottom,rgba(255,255,255,.55),transparent)}
+.sticky-cta{position:fixed;bottom:28px;right:28px;z-index:150;background:var(--gold);color:#fff;font-size:.73rem;font-weight:500;letter-spacing:.1em;padding:13px 22px;box-shadow:0 8px 32px rgba(201,169,110,.4);text-decoration:none;transition:all .3s;opacity:0;transform:translateY(20px)}
+.sticky-cta.show{opacity:1;transform:translateY(0)}
+.sticky-cta:hover{background:var(--dark)}
+.player-section{position:relative;background:linear-gradient(180deg,#1a1410 0%,#231a14 60%,#1a1410 100%);padding:96px 48px 80px;overflow:hidden}
+.player-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 40% at 20% 30%,rgba(201,169,110,.08) 0%,transparent 70%),radial-gradient(ellipse 50% 35% at 80% 70%,rgba(212,133,122,.07) 0%,transparent 70%);pointer-events:none}
+.player-header{text-align:center;margin-bottom:64px;position:relative;z-index:1}
+.eyebrow{font-family:'Playfair Display',serif;font-style:italic;font-size:.78rem;letter-spacing:.3em;color:var(--gold);margin-bottom:16px}
+.player-title{font-family:'Noto Serif KR',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:300;color:#fff;line-height:1.3}
+.player-title em{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold)}
+.player-sub{font-size:.82rem;color:rgba(255,255,255,.5);letter-spacing:.06em;margin-top:20px}
+.title-line{width:40px;height:1px;background:var(--gold);margin:28px auto 0;opacity:.6}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.audio-card{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.2);padding:32px 28px 24px;position:relative;transition:border-color .3s,background .3s}
+.audio-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .3s}
+.audio-card:hover{border-color:rgba(201,169,110,.5);background:rgba(255,255,255,.07)}
+.audio-card:hover::before{opacity:1}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.card-emoji{font-size:2rem}
+.card-tag{font-size:.62rem;letter-spacing:.18em;color:var(--gold);border:1px solid rgba(201,169,110,.4);padding:4px 10px}
+.card-name{font-family:'Noto Serif KR',serif;font-size:1.25rem;font-weight:600;color:#fff;margin-bottom:4px}
+.card-age{font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.12em;margin-bottom:16px}
+.card-desc{font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:24px;min-height:60px}
+.custom-player{display:flex;align-items:center;gap:14px;background:rgba(0,0,0,.3);border:1px solid rgba(201,169,110,.15);padding:14px 16px;margin-bottom:16px}
+.play-btn{width:42px;height:42px;border-radius:50%;background:var(--gold);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#fff;flex-shrink:0;transition:background .2s,transform .15s}
+.play-btn:hover{background:#b8925e;transform:scale(1.08)}
+.play-btn.playing{background:var(--rose)}
+.player-track{flex:1;min-width:0}
+.waveform{display:flex;align-items:center;gap:2px;height:28px;margin-bottom:8px}
+.bar{flex:1;background:rgba(201,169,110,.25);border-radius:2px}
+@keyframes wave-anim{0%,100%{transform:scaleY(1)}50%{transform:scaleY(var(--h))}}
+.bar.active{background:var(--gold)}
+.bar.played{background:rgba(201,169,110,.6)}
+.time-row{display:flex;align-items:center;gap:8px}
+.time-cur,.time-dur{font-size:.6rem;color:rgba(255,255,255,.45);flex-shrink:0;width:28px}
+.time-dur{text-align:right}
+.progress-wrap{flex:1;cursor:pointer;padding:6px 0}
+.progress-bar{height:2px;background:rgba(255,255,255,.12);border-radius:2px;position:relative}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--rose));border-radius:2px;width:0%}
+.progress-thumb{position:absolute;top:50%;left:0%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;background:var(--gold);opacity:0;transition:opacity .2s}
+.progress-wrap:hover .progress-thumb{opacity:1}
+.card-channel{font-size:.62rem;color:rgba(201,169,110,.5);letter-spacing:.16em;text-align:right;font-family:'Playfair Display',serif;font-style:italic}
+.player-note{text-align:center;margin-top:56px;font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.12em;position:relative;z-index:1}
+footer{background:var(--dark);color:rgba(255,255,255,.6);text-align:center;padding:56px 48px 40px;font-size:.76rem;line-height:2.2}
+.f-logo{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--gold);display:block;margin-bottom:12px}
+footer a{color:var(--gold-light);text-decoration:none}
+.f-div{width:40px;height:1px;background:var(--gold);margin:22px auto;opacity:.45}
+@media(max-width:900px){.cards-grid{grid-template-columns:1fr;max-width:480px}.player-section{padding:64px 24px 56px}}
+@media(max-width:768px){nav{padding:12px 18px}.nav-links{display:none}.two-col{grid-template-columns:1fr}.sticky-cta{bottom:14px;right:14px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">BLOSSOM W.A.Y.<span>Wellbeing · AI · Yourself</span></div>
+  <ul class="nav-links">
+    <li><a href="#crisis">치매 위기</a></li>
+    <li><a href="#solution">솔루션</a></li>
+    <li><a href="#science">임상 근거</a></li>
+    <li><a href="#how">작동 원리</a></li>
+    <li><a href="#business">비즈니스</a></li>
+    <li><a href="#samples">샘플 청취</a></li>
+  </ul>
+  <a href="mailto:doanhwang@gmail.com" class="nav-cta">문의하기</a>
+</nav>
+
+<div id="petals"></div>
+
+<section class="hero" id="top">
+  <img src="s01.jpg" alt="BLOSSOM W.A.Y. Radio" loading="eager">
+  <div class="scroll-hint">스크롤</div>
+</section>
+
+<section id="crisis" class="slide-section reveal"><img src="s02.jpg" alt="2050년 치매 전망" loading="lazy"></section>
+<section class="slide-section reveal"><img src="s03.jpg" alt="WHO 비약물적 예방 NPI" loading="lazy"></section>
+<div class="gold-band">가장 친숙한 매체 &nbsp;×&nbsp; 가장 진보한 AI &nbsp;—&nbsp; 나만을 위한 24시간 라디오</div>
+<section id="solution" class="slide-section reveal"><img src="s04.jpg" alt="초개인화·접근성·경제적 지속성" loading="lazy"></section>
+<section class="slide-section reveal"><img src="s05.jpg" alt="1:1 맞춤형 치매 예방 라디오" loading="lazy"></section>
+<section id="science" class="slide-section reveal"><img src="s06.jpg" alt="200편 임상 근거" loading="lazy"></section>
+<section id="how" class="slide-section reveal"><img src="s07.jpg" alt="5단계 선순환 루프" loading="lazy"></section>
+<div class="two-col">
+  <div class="reveal-l"><img src="s08.jpg" alt="라디오 스토리텔링과 뇌 보호" loading="lazy"></div>
+  <div class="reveal-r"><img src="s09.jpg" alt="소리꽃 피우기 과정" loading="lazy"></div>
+</div>
+<section class="slide-section reveal"><img src="s10.jpg" alt="BLOSSOM W.A.Y. 경쟁 비교" loading="lazy"></section>
+<section id="business" class="slide-section reveal"><img src="s11.jpg" alt="수익 모델과 확장성" loading="lazy"></section>
+<section class="slide-section reveal"><img src="s12.jpg" alt="새로운 치매 예방 패러다임" loading="lazy"></section>
+
+<section id="samples" class="player-section">
+  <div class="player-bg"></div>
+  <div class="player-header reveal">
+    <div class="eyebrow">AI 라디오 샘플 청취</div>
+    <h2 class="player-title">당신의 이야기가<br><em>라디오가 됩니다</em></h2>
+    <p class="player-sub">실제 사연을 기반으로 생성된 BLOSSOM W.A.Y. Radio 샘플을 들어보세요.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="cards-grid">
+
+    <div class="audio-card reveal" style="transition-delay:.0s">
+      <div class="card-top"><div class="card-emoji">🌸</div><div class="card-tag">한궁 사용자</div></div>
+      <div class="card-name">김영희 어르신 님</div>
+      <div class="card-age">78세 · 경증 지체장애</div>
+      <div class="card-desc">청양 한궁 대회에서 활기 넘치던 시절, 감동적인 소감 사연을 추억의 음악과 함께 담았습니다.</div>
+      <div class="custom-player" id="player-0">
+        <button class="play-btn" onclick="togglePlay(0)"><span class="pi">▶</span><span class="pai" style="display:none">⏸</span></button>
+        <div class="player-track">
+          <div class="waveform" id="wave-0"></div>
+          <div class="time-row">
+            <span class="time-cur" id="cur-0">0:00</span>
+            <div class="progress-wrap" onclick="seekTo(event,0)"><div class="progress-bar"><div class="progress-fill" id="fill-0"></div><div class="progress-thumb" id="thumb-0"></div></div></div>
+            <span class="time-dur" id="dur-0">--:--</span>
+          </div>
+        </div>
+        <audio id="audio-0" preload="none" src="김영희.mp3"></audio>
+      </div>
+      <div class="card-channel">AI 맞춤 채널 · 102.4 MHz</div>
+    </div>
+
+    <div class="audio-card reveal" style="transition-delay:.15s">
+      <div class="card-top"><div class="card-emoji">🌺</div><div class="card-tag">활동지원사</div></div>
+      <div class="card-name">박수민 님</div>
+      <div class="card-age">32세 · 활동지원사 4년 차</div>
+      <div class="card-desc">4년간 곁에서 돌보며 쌓아온 따뜻한 기억들, 함께한 시간이 만들어낸 특별한 이야기입니다.</div>
+      <div class="custom-player" id="player-1">
+        <button class="play-btn" onclick="togglePlay(1)"><span class="pi">▶</span><span class="pai" style="display:none">⏸</span></button>
+        <div class="player-track">
+          <div class="waveform" id="wave-1"></div>
+          <div class="time-row">
+            <span class="time-cur" id="cur-1">0:00</span>
+            <div class="progress-wrap" onclick="seekTo(event,1)"><div class="progress-bar"><div class="progress-fill" id="fill-1"></div><div class="progress-thumb" id="thumb-1"></div></div></div>
+            <span class="time-dur" id="dur-1">--:--</span>
+          </div>
+        </div>
+        <audio id="audio-1" preload="none" src="박수민.mp3"></audio>
+      </div>
+      <div class="card-channel">AI 맞춤 채널 · 102.5 MHz</div>
+    </div>
+
+    <div class="audio-card reveal" style="transition-delay:.3s">
+      <div class="card-top"><div class="card-emoji">❀</div><div class="card-tag">치매 예방</div></div>
+      <div class="card-name">이순자 님</div>
+      <div class="card-age">68세 · 경도인지장애</div>
+      <div class="card-desc">소중한 기억을 되살리는 회상 요법, 나만의 이야기가 뇌를 깨우는 라디오입니다.</div>
+      <div class="custom-player" id="player-2">
+        <button class="play-btn" onclick="togglePlay(2)"><span class="pi">▶</span><span class="pai" style="display:none">⏸</span></button>
+        <div class="player-track">
+          <div class="waveform" id="wave-2"></div>
+          <div class="time-row">
+            <span class="time-cur" id="cur-2">0:00</span>
+            <div class="progress-wrap" onclick="seekTo(event,2)"><div class="progress-bar"><div class="progress-fill" id="fill-2"></div><div class="progress-thumb" id="thumb-2"></div></div></div>
+            <span class="time-dur" id="dur-2">--:--</span>
+          </div>
+        </div>
+        <audio id="audio-2" preload="none" src="이순자.mp3"></audio>
+      </div>
+      <div class="card-channel">AI 맞춤 채널 · 102.6 MHz</div>
+    </div>
+
+  </div>
+  <div class="player-note reveal">✦ &nbsp;위 음원은 실제 사용자 사연을 기반으로 BLOSSOM W.A.Y. ACE Engine이 생성한 AI 라디오 콘텐츠입니다.</div>
+</section>
+
+<footer>
+  <span class="f-logo">BLOSSOM W.A.Y.</span>
+  <div>Wellbeing · AI · Yourself</div>
+  <div class="f-div"></div>
+  <div>주식회사 휴리스틱</div>
+  <div><a href="mailto:doanhwang@gmail.com">doanhwang@gmail.com</a></div>
+  <div class="f-div"></div>
+  <div style="font-size:.67rem;opacity:.45">© 2026 Heuristic Corporation. All rights reserved.<br>ACE Engine Patent Pending · 시니어를 위한 최초의 임상 검증 기반 치매 예방 특화 AI 개인화 라디오 케어 프로그램</div>
+</footer>
+
+<a href="mailto:doanhwang@gmail.com" class="sticky-cta" id="stickyCta">✦ 지금 문의하기</a>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.06});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el=>obs.observe(el));
+const cta=document.getElementById('stickyCta');
+window.addEventListener('scroll',()=>cta.classList.toggle('show',scrollY>500));
+const pc=document.getElementById('petals'),sy=['🌸','🌺','✿','❀'];
+function mkP(){const e=document.createElement('div');e.className='petal';e.textContent=sy[Math.floor(Math.random()*4)];const d=9+Math.random()*14;e.style.cssText=`left:${Math.random()*100}vw;font-size:${.55+Math.random()*.8}rem;opacity:${.25+Math.random()*.4};animation-duration:${d}s;animation-delay:${Math.random()*d}s`;pc.appendChild(e);setTimeout(()=>e.remove(),(d+5)*1000)}
+for(let i=0;i<5;i++)setTimeout(mkP,i*1400);setInterval(mkP,2500);
+[0,1,2].forEach(i=>{const w=document.getElementById('wave-'+i);for(let j=0;j<40;j++){const b=document.createElement('div');b.className='bar';const h=.15+Math.random()*.85;b.style.height=(h*100)+'%';b.style.setProperty('--h',h);w.appendChild(b);}});
+const audios=[0,1,2].map(i=>document.getElementById('audio-'+i));
+const fills=[0,1,2].map(i=>document.getElementById('fill-'+i));
+const thumbs=[0,1,2].map(i=>document.getElementById('thumb-'+i));
+const curs=[0,1,2].map(i=>document.getElementById('cur-'+i));
+const durs=[0,1,2].map(i=>document.getElementById('dur-'+i));
+const btns=[0,1,2].map(i=>document.querySelector('#player-'+i+' .play-btn'));
+const bars=[0,1,2].map(i=>[...document.querySelectorAll('#wave-'+i+' .bar')]);
+function fmt(s){return Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0')}
+function animWave(idx,on){bars[idx].forEach((b,i)=>{b.style.animation=on?`wave-anim ${.4+Math.random()*.6}s ease-in-out ${i*.025}s infinite`:''})}
+audios.forEach((a,i)=>{
+  a.addEventListener('loadedmetadata',()=>durs[i].textContent=fmt(a.duration));
+  a.addEventListener('timeupdate',()=>{if(!a.duration)return;const p=(a.currentTime/a.duration)*100;fills[i].style.width=p+'%';thumbs[i].style.left=p+'%';curs[i].textContent=fmt(a.currentTime);const t=Math.floor(p/100*40);bars[i].forEach((b,j)=>{b.classList.toggle('played',j<t);b.classList.toggle('active',j===t)});});
+  a.addEventListener('ended',()=>{btns[i].classList.remove('playing');btns[i].querySelector('.pi').style.display='';btns[i].querySelector('.pai').style.display='none';animWave(i,false);fills[i].style.width='0%';thumbs[i].style.left='0%';curs[i].textContent='0:00';bars[i].forEach(b=>b.classList.remove('played','active'));});
+});
+function togglePlay(idx){const a=audios[idx],btn=btns[idx],playing=!a.paused;audios.forEach((o,i)=>{if(i!==idx&&!o.paused){o.pause();btns[i].classList.remove('playing');btns[i].querySelector('.pi').style.display='';btns[i].querySelector('.pai').style.display='none';animWave(i,false)}});if(playing){a.pause();btn.classList.remove('playing');btn.querySelector('.pi').style.display='';btn.querySelector('.pai').style.display='none';animWave(idx,false)}else{a.play();btn.classList.add('playing');btn.querySelector('.pi').style.display='none';btn.querySelector('.pai').style.display='';animWave(idx,true)}}
+function seekTo(e,idx){const r=e.currentTarget.getBoundingClientRect();const p=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));if(audios[idx].duration)audios[idx].currentTime=p*audios[idx].duration}
+</script>
+</body>
+</html>
